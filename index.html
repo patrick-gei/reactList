@@ -11,17 +11,24 @@
     </div>
     <script>
       const reactContainer = document.getElementById("react");
+      const listItem = (props) => {
+          const { text } = props
+          return React.createElement('li', null, text);
+      }
+      const App = (props) => {
+          return React.createElement(listItem, { text: props } );
+      }
+
       ReactDOM.render(
              React.createElement('div', null,
                  React.createElement('h1', null, 'Hello DOJO'),
-                 React.createElement('h3', null, 'What I need'),
+                 React.createElement('h3', null, 'What I need:'),
                  React.createElement('ul', null,
-                    React.createElement('li', null, 'React'),
-                    React.createElement('li', null, 'Everest'),
-                    React.createElement('li', null, 'Run'),
-                    React.createElement('li', null, 'Dogs'),
+                    App("Run"),
+                    App("Everest"),
+                    App("Dog"),
                  )
-              ), reactContainer);
+               ), reactContainer);
     </script>
   </body>
 </html>
