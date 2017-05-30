@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Basics</title>
+    <script src='./node_modules/react/dist/react.js'></script>
+    <script src='./node_modules/react-dom/dist/react-dom.js'></script>
+  </head>
+  <body>
+    <div id='react'>
+    </div>
+    <script>
+      const reactContainer = document.getElementById("react");
+      ReactDOM.render(
+             React.createElement('div', null,
+                 React.createElement('h1', null, 'Hello DOJO'),
+                 React.createElement('h3', null, 'What I need'),
+                 React.createElement('ul', null,
+                    React.createElement('li', null, 'React'),
+                    React.createElement('li', null, 'Everest'),
+                    React.createElement('li', null, 'Run'),
+                    React.createElement('li', null, 'Dogs'),
+                 )
+              ), reactContainer);
+    </script>
+  </body>
+</html>
